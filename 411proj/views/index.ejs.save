@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>YouTube Analytics</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ </head>
+
+ <body>
+   <nav class="navbar navbar-expand-lg navbar-light light-nav">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#introid">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="highlights.html">Snaps</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#music">Music</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <div class="container mt-4">
+     <div class="card">
+       <div class="card-body">
+         <h2>Insert your video details below:</h2>
+         <form action="mark2" method="POST">
+           <div class="form-group">
+             <label for="chanid">Channel Name:</label>
+             <input type="text" class="form-control col-lg-9" id="chanid" aria-describedby="emailHelp" placeholder="Enter Channel Name" name="chanid">
+             <label for="emid">Email:</label>
+             <input type="text" class="form-control col-lg-9" id="emid" aria-describedby="emailHelp" placeholder="Enter Email Id" name="emid">
+             <label for="passid">Password</label>
+             <input type="text" class="form-control col-lg-9" id="passid" aria-describedby="emailHelp" placeholder="Enter Password" name="passid">
+
+           </div>
+           <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+   </div>
+   <div class="container mt-4">
+     <div class="card">
+       <div class="card-body">
+         <h2>Insert your video details you would like to delete below:</h2>
+         <form action="mark" method="POST">
+           <div class="form-group">
+             <label for="chanid2">Channel Name:</label>
+             <input type="text" class="form-control col-lg-9" id="chanid2" aria-describedby="emailHelp" placeholder="Enter Channel Name" name="chanid2">
+             <label for="emid2">Email:</label>
+             <input type="text" class="form-control col-lg-9" id="emid2" aria-describedby="emailHelp" placeholder="Enter Email Id" name="emid2">
+             <label for="passid2">Password</label>
+             <input type="text" class="form-control col-lg-9" id="passid2" aria-describedby="emailHelp" placeholder="Enter Password" name="passid2">
+
+           </div>
+           <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+   </div>
+   <div class="container mt-4">
+     <div class="card">
+       <div class="card-body">
+         <h2>Insert your video details below:</h2>
+         <form action="mark2" method="POST">
+           <div class="form-group">
+             <label for="chanid">Channel Name:</label>
+             <input type="text" class="form-control col-lg-9" id="chanid" aria-describedby="emailHelp" placeholder="Enter Channel Name" name="chanid">
+             <label for="emid">Email:</label>
+             <input type="text" class="form-control col-lg-9" id="emid" aria-describedby="emailHelp" placeholder="Enter Email Id" name="emid">
+             <label for="passid">Password</label>
+             <input type="text" class="form-control col-lg-9" id="passid" aria-describedby="emailHelp" placeholder="Enter Password" name="passid">
+
+           </div>
+           <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+   </div>
+ </div>
+ </body>
+</html>

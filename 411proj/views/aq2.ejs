@@ -1,0 +1,28 @@
+<!-- users.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results</title>
+</head>
+<body>
+  <h1>Results</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Channel Name</th>
+	<th>Number of Videos</th>
+	<th>View Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i = 0; i < aq2result.length; i++) { %>
+        <tr>
+          <td><%= aq2result[i].ChannelTitle %></td>
+          <td><%= aq2result[i].NumofVideos %></td>
+	  <td><%= aq2result[i].TotalViews %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>
