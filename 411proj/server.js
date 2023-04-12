@@ -45,38 +45,27 @@ app.post('/mark', function(req, res) {
   var sql = `INSERT INTO User VALUES ('${chanid}','${emid}','${passid}')`;
 
 console.log(sql);
-  connection.query(sql, function(err, result) {
+  actual_connection.query(sql, function(err, result) {
     if (err) {
       res.send(err)
       return;
     }
-    res.redirect('/success');
+    res.send("Insert successful!");
   });
-});
-
-/* GET home page, respond by rendering index.ejs */
-app.get('/', function(req, res) {
-  res.render('index', { title: 'Mark Attendance' });
-});
-
-app.get('/success', function(req, res) {
-      res.send("it works");
 });
 
 // this code is executed when a user clicks the form submit button
 app.post('/mark2', function(req, res) {
   var chanid2 = req.body.chanid2;
-  var emid2 = req.body.emid2;
-  var passid2 = req.body.passid2;
   var sql2 = `DELETE FROM User WHERE ChannelName = '${chanid2}'`;
 
 console.log(sql2);
-  connection.query(sql2, function(err, result) {
+  actual_connection.query(sql2, function(err, result) {
     if (err) {
       res.send(err)
       return;
     }
-    res.redirect('/success');
+    res.send("Delete successful!");
   });
 });
 
@@ -117,15 +106,6 @@ app.post('/aq2', function(req, res) {
 
 
 // UPDATE CHANNEL NAME
-/* GET home page, respond by rendering index.ejs */
-app.get('/', function(req, res) {
-  res.render('index', { title: 'Update Channel Name' });
-});
-
-app.get('/success', function(req, res) {
-      res.send("Successfully updated the channel name!");
-});
-
 // this code is executed when a user clicks the form submit button
 app.post('/update', function(req, res) {
   var currChanID = req.body.currChanName;
@@ -133,12 +113,12 @@ app.post('/update', function(req, res) {
   var sql = `UPDATE User SET ChannelName = '${newChanID}' WHERE ChannelName = '${currChanID}'`
 
 console.log(sql);
-  connection.query(sql, function(err, result) {
+  actual_connection.query(sql, function(err, result) {
     if (err) {
       res.send(err)
       return;
     }
-    res.redirect('/success');
+    res.send("Successfully updated the username!");
   });
 });
 
