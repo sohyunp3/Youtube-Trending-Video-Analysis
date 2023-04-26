@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+<div class="container mt-4">
+<div class="card">
+<div class="card-body">
+ <h2>Advanced query 1:</h2>
+ <h5>This query selects the top videos per category which have all more than 1,000,000 in views</h5>
+ <form action="aq1" method="POST">
+   <div class="form-group">
+   </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+</div>
+</div>
+</div>
+
+
+<div class="container mt-4">
+<div class="card">
+<div class="card-body">
+ <h2>Advanced query 2:</h2>
+ <h5>This query joins the Channel and Video tables based on the ChannelId column, groups the result by ChannelTitle and calculates the count of videos and the total views for each channel, and then orders the resu>
+ <form action="aq2" method="POST">
+   <div class="form-group">
+   </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+</div>
+</div>
+</div>

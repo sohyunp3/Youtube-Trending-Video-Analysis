@@ -33,16 +33,33 @@ app.get('/', function(req, res) {
   res.render('index', { title: 'Mark Attendance' });
 });
 
-app.get('/success', function(req, res) {
-      res.send("it works");
+app.get('/insert', function(req, res) {
+  res.render('insert.ejs');
 });
 
+app.get('/search', function(req, res) {
+  res.render('search.ejs');
+});
+
+app.get('/update', function(req, res) {
+  res.render('update.ejs');
+});
+
+app.get('/delete', function(req, res) {
+  res.render('delete.ejs');
+});
+
+app.get('/advanced_query', function(req, res) {
+  res.render('advanced_query.ejs');
+});
 // this code is executed when a user clicks the form submit button
 app.post('/mark', function(req, res) {
-  var chanid = req.body.chanid;
-  var emid = req.body.emid;
-  var passid = req.body.passid;
-  var sql = `INSERT INTO User VALUES ('${chanid}','${emid}','${passid}')`;
+  var videoid = req.body.videoid;
+  var videotitle = req.body.videotitle;
+  var channelid = req.body.channelid;
+  var channelname = req.body.channelname;
+  var views = req.body.views;
+  var sql = `INSERT INTO Video VALUES ('${videoid}','${videotitle}',1,'${channelid}','${channelname}','${views}')`;
 
 console.log(sql);
   actual_connection.query(sql, function(err, result) {
@@ -56,8 +73,9 @@ console.log(sql);
 
 // this code is executed when a user clicks the form submit button
 app.post('/mark2', function(req, res) {
-  var chanid2 = req.body.chanid2;
-  var sql2 = `DELETE FROM User WHERE ChannelName = '${chanid2}'`;
+  var channame = req.body.channame;
+  var vidtitle = req.body.vidtitle;
+  var sql2 = `DELETE FROM Video WHERE ChannelName = '${channame}' AND VideoTitle = '${vidtitle}'`;
 
 console.log(sql2);
   actual_connection.query(sql2, function(err, result) {
@@ -73,7 +91,7 @@ console.log(sql2);
 app.post('/search', function(req, res) {
   var channelname = req.body.channelname;
 
-  actual_connection.query('SELECT * FROM Channel JOIN Video USING (ChannelId) WHERE Channel.ChannelTitle = ?', [channelname], function(err, result) {
+  actual_connection.query('SELECT * FROM Video WHERE ChannelName = ?', [channelname], function(err, result) {
     if (err) {
       res.send(err)
       return;

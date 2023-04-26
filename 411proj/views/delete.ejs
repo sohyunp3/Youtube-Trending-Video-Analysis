@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+<div class="container mt-4" id="delete">
+<div class="card">
+<div class="card-body">
+ <h2>Select the video that you would like to delete below:</h2>
+ <form action="mark2" method="POST">
+   <div class="form-group">
+     <label for="channame">Channel Name:</label>
+     <input type="text" class="form-control col-lg-9" id="channame" aria-describedby="emailHelp" placeholder="Enter Channel Name" name="channame">
+     <label for="vidtitle">Video Title:</label>
+     <input type="text" class="form-control col-lg-9" id="vidtitle" aria-describedby="emailHelp" placeholder="Enter Video Title" name="vidtitle">
+   </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+</div>
+</div>
+</div>

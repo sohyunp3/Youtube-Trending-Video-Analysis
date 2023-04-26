@@ -10,12 +10,14 @@
     <thead>
       <tr>
         <th>Video Name</th>
+        <th>Views</th>
       </tr>
     </thead>
     <tbody>
       <% for (var i = 0; i < users.length; i++) { %>
         <tr>
           <td><%= users[i].VideoTitle %></td>
+          <td><%= users[i].Views %></td>
         </tr>
       <% } %>
     </tbody>

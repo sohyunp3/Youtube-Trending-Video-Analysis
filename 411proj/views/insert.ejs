@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%>
+<div class="container mt-4">
+<div class="card">
+<div class="card-body">
+ <h2>Insert the video details below:</h2>
+ <form action="mark" method="POST">
+   <div class="form-group">
+     <label for="videoid">Video ID:</label>
+     <input type="text" class="form-control col-lg-9" id="videoid" aria-describedby="emailHelp" placeholder="Enter Video ID" name="videoid">
+     <label for="videotitle">Video Name:</label>
+     <input type="text" class="form-control col-lg-9" id="videotitle" aria-describedby="emailHelp" placeholder="Enter Video Name" name="videotitle">
+     <label for="channelid">Channel ID</label>
+     <input type="text" class="form-control col-lg-9" id="channelid" aria-describedby="emailHelp" placeholder="Enter Channel ID" name="channelid">
+     <label for="channelname">Channel Name</label>
+     <input type="text" class="form-control col-lg-9" id="channelname" aria-describedby="emailHelp" placeholder="Enter Channel Name" name="channelname">
+     <label for="views">Views</label>
+     <input type="text" class="form-control col-lg-9" id="views" aria-describedby="emailHelp" placeholder="Enter View Count" name="views">
+
+   </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+</div>
+</div>
+</div>
