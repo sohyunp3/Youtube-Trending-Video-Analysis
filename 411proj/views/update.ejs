@@ -1,17 +1,20 @@
 <%- include("partials/header"); -%>
 <div class="container mt-4" id="update">
+  <h1 style="text-align:center;background: linear-gradient(#e66465, #9198e5);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: bold;"> Video Succesfully updated! </h1>
+  <p style="text-align:center;">Update more videos below?</p>
     <div class="card">
     <div class="card-body">
-     <h2>Change your username:</h2>
+     <h2>Change video name:</h2>
      <form action="update" method="POST">
        <div class="form-group">
-         <label for="currChanName">Current username:</label>
-         <input type="text" class="form-control col-lg-9" id="curChanid" aria-describedby="emailHelp" placeholder="Enter Current username" name="currChanName">
-         <label for="newChanName">New username:</label>
-         <input type="text" class="form-control col-lg-9" id="newChanid" aria-describedby="emailHelp" placeholder="Enter New username" name="newChanName">
+         <label for="videoid">Video ID:</label>
+         <input type="text" class="form-control col-lg-9" id="videoid" aria-describedby="emailHelp" placeholder="Enter Video ID" name="videoid">
+         <label for="newvideoname">New Video Name:</label>
+         <input type="text" class="form-control col-lg-9" id="newvideoname" aria-describedby="emailHelp" placeholder="Enter New Video Name" name="newvideoname">
        </div>
        <button type="submit" class="btn btn-primary">Update</button>
      </form>
     </div>
 </div>
 </div>
+

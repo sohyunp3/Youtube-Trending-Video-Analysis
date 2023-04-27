@@ -1,29 +1,40 @@
 <%- include("partials/header"); -%>
 <div class="container mt-4">
-<div class="card">
-<div class="card-body">
- <h2>Advanced query 1:</h2>
- <h5>This query selects the top videos per category which have all more than 1,000,000 in views</h5>
- <form action="aq1" method="POST">
-   <div class="form-group">
-   </div>
-   <button type="submit" class="btn btn-primary">Submit</button>
- </form>
-</div>
-</div>
-</div>
+  <div class="card">
+  <div class="card-body">
+   <h2>Top Trending Videos🔥:</h2>
+   <form action="aq1" method="POST">
+     <div class="form-group">
+     </div>
+      <div class="form-group">
+       <label for="aq1name">Category Name:</label>
+       <input type="text" class="form-control col-lg-9" id="chanid2" aria-describedby="emailHelp" placeholder="Enter category" name="aq1name">
+  
+     </div>
+     <button type="submit" class="btn btn-outline-danger">Submit</button>
+   </form>
+  </div>
+  </div>
+  </div>
+  
 
 
-<div class="container mt-4">
-<div class="card">
-<div class="card-body">
- <h2>Advanced query 2:</h2>
- <h5>This query joins the Channel and Video tables based on the ChannelId column, groups the result by ChannelTitle and calculates the count of videos and the total views for each channel, and then orders the resu>
- <form action="aq2" method="POST">
-   <div class="form-group">
-   </div>
-   <button type="submit" class="btn btn-primary">Submit</button>
- </form>
-</div>
-</div>
-</div>
+  <div class="container mt-4">
+    <div class="card">
+    <div class="card-body">
+     <h2>Top Channels 🚀:</h2>
+      <h5>Channels with the most consistent viewership</h5>
+     <form action="aq2" method="POST">
+       <div class="form-group">
+       <label for="aq2name">Select the Top Number of Channels:</label>
+       <input type="text" class="form-control col-lg-9" id="chanid2" aria-describedby="emailHelp" placeholder="Enter a number" name="aq2name">
+  
+     </div>
+
+       <button type="submit" class="btn btn-outline-primary">Take me there↗️</button>
+     </form>
+    </div>
+    </div>
+    
+    </div>
+

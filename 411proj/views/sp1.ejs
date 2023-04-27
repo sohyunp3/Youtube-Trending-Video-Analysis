@@ -1,0 +1,30 @@
+<!-- users.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results</title>
+</head>
+<body>
+  <h1>Results</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Video ID</th>
+        <th>Video Name</th>
+        <th>Channel Name</th>
+        <th>Views</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i = 0; i < sp1result.length; i++) { %>
+        <tr>
+          <td><%= sp1result[i].VideoId %></td>
+          <td><%= sp1result[i].VideoTitle %></td>
+          <td><%= sp1result[i].ChannelTitle %></td>
+          <td><%= sp1result[i].Views %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>

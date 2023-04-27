@@ -1,16 +1,97 @@
 <%- include("partials/header"); -%>
-<div class="container mt-4" id="search">
-<div class="card">
-<div class="card-body">
- <h2>Search Channel:</h2>
- <form action="search" method="POST">
-   <div class="form-group">
-     <label for="channelname">Channel Name:</label>
-     <input type="text" class="form-control col-lg-9" id="chanid2" aria-describedby="emailHelp" placeholder="Enter Channel Name" name="channelname">
+<body>
 
-   </div>
-   <button type="submit" class="btn btn-primary">Submit</button>
- </form>
+
+  <div class="container mt-4" >
+    <h2 style="background: linear-gradient(#e66465, #9198e5);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: bold;">New Video? Insert it into our database below!</h2>
+    <h5>Nice Job on Uploading, but let's analyse where you stand 🥶</h5>
+  <div class="card">
+  <div class="card-body">
+   <h2>Insert video details 📈:</h2>
+   <form action="mark" method="POST">
+     <div class="form-group">
+       <label for="videoid">Video ID:</label>
+       <input type="text" class="form-control col-lg-9" id="videoid" aria-describedby="emailHelp" placeholder="Enter Video ID" name="videoid">
+       <label for="videotitle">Video Name:</label>
+       <input type="text" class="form-control col-lg-9" id="videotitle" aria-describedby="emailHelp" placeholder="Enter Video Name" name="videotitle">
+       <label for="channelid">Channel ID</label>
+       <input type="text" class="form-control col-lg-9" id="channelid" aria-describedby="emailHelp" placeholder="Enter Channel ID" name="channelid">
+       <label for="channelname">Channel Name</label>
+       <input type="text" class="form-control col-lg-9" id="channelname" aria-describedby="emailHelp" placeholder="Enter Channel Name" name="channelname">
+       <label for="views">Views</label>
+       <input type="text" class="form-control col-lg-9" id="views" aria-describedby="emailHelp" placeholder="Enter View Count" name="views">
+  
+     </div>
+     <button type="submit" class="btn btn-outline-primary">Insert</button>
+   </form>
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="container mt-4" id="search">
+    <h2 style="background: linear-gradient(#e66465, #9198e5);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: bold;">Search for detailed stats about YouTube channels</h2>
+  <h5>Let's see some stats not so easily available</h5>
+  <div class="card">
+  <div class="card-body">
+   <h2>Search Channels 🔍:</h2>
+   <form action="search" method="POST">
+     <div class="form-group">
+       <label for="channelname">Channel Name:</label>
+       <input type="text" class="form-control col-lg-9" id="chanid2" aria-describedby="emailHelp" placeholder="Enter Channel Name" name="channelname">
+  
+     </div>
+     <button type="submit" class="btn btn-outline-info">Search </button>
+   </form>
+  </div>
+  </div>
+  </div>
+  
+  
+  <div class="container mt-4" id="delete">
+    <h2 style="background: linear-gradient(#e66465, #9198e5);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: bold;">Have to Delete your video?</h2>
+    <h5>No worries!</h5>
+  <div class="card">
+  <div class="card-body">
+   <h2>Delete your video❌:</h2>
+   <form action="mark2" method="POST">
+     <div class="form-group">
+       <label for="channame">Channel Name:</label>
+       <input type="text" class="form-control col-lg-9" id="channame" aria-describedby="emailHelp" placeholder="Enter Channel Name" name="channame">
+       <label for="vidtitle">Video Title:</label>
+       <input type="text" class="form-control col-lg-9" id="vidtitle" aria-describedby="emailHelp" placeholder="Enter Video Title" name="vidtitle">
+     </div>
+     <button type="submit" class="btn btn-outline-danger">Delete</button>
+   </form>
+  </div>
+  </div>
+  </div>
+
+
+
+  <div class="container mt-4" id="update">
+    <h2 style="background: linear-gradient(#e66465, #9198e5);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: bold;">Have to Update your video?</h2>
+    <h5>We got you!</h5>
+    <div class="card">
+    <div class="card-body">
+     <h2>Change video name✅ :</h2>
+     <form action="update" method="POST">
+       <div class="form-group">
+         <label for="videoid">Video ID:</label>
+         <input type="text" class="form-control col-lg-9" id="videoid" aria-describedby="emailHelp" placeholder="Enter Video ID" name="videoid">
+         <label for="newvideoname">New Video Name:</label>
+         <input type="text" class="form-control col-lg-9" id="newvideoname" aria-describedby="emailHelp" placeholder="Enter New Video Name" name="newvideoname">
+       </div>
+       <button type="submit" class="btn btn-outline-warning">Update</button>
+     </form>
+    </div>
 </div>
 </div>
-</div>
+
+  
+  </body>
+
+

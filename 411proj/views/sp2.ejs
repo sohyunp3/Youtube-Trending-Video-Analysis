@@ -1,0 +1,28 @@
+<!-- users.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results</title>
+</head>
+<body>
+  <h1>Results</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Channel ID</th>
+        <th>Channel Name</th>
+        <th>Average Views</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i = 0; i < sp2result.length; i++) { %>
+        <tr>
+          <td><%= sp2result[i].ChannelId %></td>
+          <td><%= sp2result[i].ChannelTitle %></td>
+          <td><%= sp2result[i].AvgViews %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>
