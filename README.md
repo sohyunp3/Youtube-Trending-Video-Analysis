@@ -1,5 +1,3 @@
-# sp23-cs411-team001-asdf
-
 ## YouAnalytics: YouTube Trending Videos Analysis
 **Content creators are constantly looking to identify ways to increase engagement and expand their audiences.**
 
